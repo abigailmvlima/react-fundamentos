@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Acomodacao() {
     return (
         <div>
@@ -11,15 +13,25 @@ export function Acomodacao() {
 
 export function Menu() {
     return (
-        <div className="bg-blue-300">
-            Acomodações | Experiências
+        <div className="bg-gray-500">
+            <MenuItem texto="Home" url="/inicio" />
+            <MenuItem texto="Acomodações" url="/acomodacoes" />
+            <MenuItem texto="Ajuda" url="/inicio" />
         </div>
     );
 }
 
-export function Cabecalho(props: any) {
+export function MenuItem(props:any) {
     return (
-        <div className="bg-blue-300">
+        <Link href={props.url} className="p-2">{props.texto}
+        </Link>
+    );
+}
+
+export function Cabecalho(props: any) {
+    const classe = props.className ?? "";
+    return (
+        <div className= {"p-3 " + classe}>
             <p>{props.titulo}</p>
             <p>{props.subtitulo}</p>
         </div>
