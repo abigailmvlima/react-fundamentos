@@ -1,22 +1,26 @@
-import { Cabecalho, Conteudo, Rodape } from "../../components/interface";
+import { Acomodacao, Cabecalho, Conteudo, Menu, Rodape } from "../../components/interface"
+import PaginaSite from "../../components/PaginaSite"
 
-export default function Principal() {
+export default function Pagina(){
     return (
-        <div>
-            <Cabecalho
-            titulo= "Airbnb" subtitulo= "Início"/>
-
-           <Conteudo>
-               <h1>Página início</h1>
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                Cum, consequuntur officiis consectetur id dolor suscipit 
-                reiciendis facilis maiores earum amet minus eveniet ratione 
-                molestiae itaque adipisci iste dolorum.
-                </p>
-           </Conteudo>
-
-            <Rodape />
-        </div>
-        
+        <PaginaSite 
+        titulo="AirBnb"
+        subtitulo="Início"
+        >
+        <h1>Página Início</h1>
+        <img
+            src="/img/formula1.webp"
+            style={ {width:90, height: 90}}
+        />
+        <p>
+            Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Praesentium odio 
+            vero vel beatae ab odit dolorem 
+            doloremque dolores vitae? Provident 
+            illum at nesciunt, libero blanditiis 
+            laboriosam culpa repudiandae sint 
+            facere?
+        </p>
+        </PaginaSite>    
     )
 }
