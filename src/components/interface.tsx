@@ -20,12 +20,24 @@ export function Menu() {
 export function Cabecalho(props: any) {
     return (
         <div className="bg-blue-300">
-            <h1>Logo</h1>
             <p>{props.titulo}</p>
-            <p>{props.preco}</p>
-            {Menu()}
+            <p>{props.subtitulo}</p>
         </div>
     );
 }
 
+export function Rodape() {
+    return (
+        <div className="bg-blue-300">
+            <p>Rodapé</p>
+        </div>
+    )
+}
 
+export function Conteudo(props: any) {
+    return (
+        <div className="bg-gray-400">
+            <p>{props.children}</p>
+        </div>
+    )
+}
