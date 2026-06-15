@@ -1,9 +1,27 @@
+'use client'
+
+import { useState } from "react"
+
 export default function Entrada(){
 
-    return(
+    const [valor, setValor] = useState('')
+    
+    function alterarValor( e: React.ChangeEvent<HTMLInputElement> ){
+        setValor( e.target.value )
+    }
+
+    return (
         <div className="p-2">
-            <h1>Entrada de Dados</h1>
-            <input type="text" className="campo-texto" placeholder="Digite seu nome" />
+            <h1>Entrada de dados</h1>
+            <input 
+            value={valor}
+            className="campo-texto"
+            // onChange={ e => setValor( e.target.value ) }
+            onChange={alterarValor}
+            type="text" />
+
+            <h4>Valor digitado: {valor}</h4>
+
         </div>
     )
 }
