@@ -22,3 +22,9 @@ body {
   @apply bg-red-500 p-5;
   @apply hover:bg-purple-500;
 }
+
+.campo-texto{
+  @apply bg-gray-500 p-1;
+  @apply hover:bg-gray-300;
+  @apply rounded-md;
+}
