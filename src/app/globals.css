@@ -25,6 +25,6 @@ body {
 
 .campo-texto{
   @apply bg-gray-500 p-1;
-  @apply hover:bg-gray-300;
+  @apply hover:bg-gray-600;
   @apply rounded-md;
 }
